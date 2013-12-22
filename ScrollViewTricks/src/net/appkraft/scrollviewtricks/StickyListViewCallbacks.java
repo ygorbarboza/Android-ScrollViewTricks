@@ -19,9 +19,10 @@ public class StickyListViewCallbacks implements ObservableListView.Callbacks {
 	
 	@Override
 	public void onScrollChanged() {
-		
-		mStickyView.setTranslationY(Math.max(0, mPlaceholderView.getTop()
-				- mObservableScrollView.getScrollY()));
+		ViewHelper.setTranslationY(mStickyView, Math.max(0, mPlaceholderView.getTop()
+                - mObservableScrollView.getScrollY()));
+		// mStickyView.setTranslationY(Math.max(0, mPlaceholderView.getTop()
+		//		- mObservableScrollView.getScrollY()));
 		
 	}
 

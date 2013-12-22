@@ -7,7 +7,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.ScrollView;
 
 /**
  * A custom ScrollView that can accept a scroll listener.

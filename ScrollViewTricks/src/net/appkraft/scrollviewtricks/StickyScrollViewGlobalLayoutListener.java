@@ -2,7 +2,6 @@ package net.appkraft.scrollviewtricks;
 
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.ScrollView;
 
 public class StickyScrollViewGlobalLayoutListener implements
 		ViewTreeObserver.OnGlobalLayoutListener {

@@ -37,10 +37,11 @@ public class QuickReturnListViewCallbacks implements
 		int translationY = 0;
 
 		if (mQuickReturnListPosition == -1) {
-
-			mQuickReturnListPosition = mObservableScrollView
-					.getPositionForView(mPlaceholderView);
-			mQuickReturnY = mObservableScrollView.getViewHeigth(mPlaceholderView);
+            if (mObservableScrollView != null && mPlaceholderView != null) {
+                mQuickReturnListPosition = mObservableScrollView
+                        .getPositionForView(mPlaceholderView);
+                mQuickReturnY = mObservableScrollView.getViewHeigth(mPlaceholderView);
+            }
 
 		}
 
@@ -92,7 +93,8 @@ public class QuickReturnListViewCallbacks implements
 			break;
 		}
 
-		mQuickReturnView.setTranslationY(translationY);
+		// mQuickReturnView.setTranslationY(translationY);
+		ViewHelper.setTranslationY(mQuickReturnView, translationY);
 
 	}
 
