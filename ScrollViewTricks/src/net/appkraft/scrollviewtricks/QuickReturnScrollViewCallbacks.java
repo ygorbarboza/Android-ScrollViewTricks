@@ -71,7 +71,9 @@ public class QuickReturnScrollViewCallbacks implements ObservableScrollView.Call
                 break;
         }
 
-        mQuickReturnView.setTranslationY(translationY);
+        ViewHelper.setTranslationY(mQuickReturnView, translationY);
+        
+        // mQuickReturnView.setTranslationY(translationY);
 		
 	}
 

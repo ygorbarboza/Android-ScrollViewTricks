@@ -2,7 +2,6 @@ package net.appkraft.scrollviewtricks;
 
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.ScrollView;
 
 public class QuickReturnScrollViewGlobalLayoutListener implements ViewTreeObserver.OnGlobalLayoutListener {
 
@@ -26,8 +25,8 @@ public class QuickReturnScrollViewGlobalLayoutListener implements ViewTreeObserv
 	public void onGlobalLayout() {
 		
 		mCallbacks.onScrollChanged();
-		mCallbacks.mCachedVerticalScrollRange = mObservableScrollView.computeVerticalScrollRange();
-		mCallbacks.mQuickReturnHeight = mQuickReturnView.getHeight();
+		QuickReturnScrollViewCallbacks.mCachedVerticalScrollRange = mObservableScrollView.computeVerticalScrollRange();
+		QuickReturnScrollViewCallbacks.mQuickReturnHeight = mQuickReturnView.getHeight();
 		
 	}
 
